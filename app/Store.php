@@ -15,6 +15,11 @@ class Store extends Model
      	return $this->belongsTo('App\User');
      }
 
+      public function products()
+    {
+       return $this->hasMany('App\Product');
+    }
+
       public function comments_users()
     {
        return $this->hasMany('App\Comment_Store');
